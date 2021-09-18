@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Map</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="menu.html">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="header_option_list">
+            <a href="map.html" class="header_option">
+                Interactive Map
+            </a>
+            <a href="manager.html" class="header_option">
+                Team Manager
+            </a>
+            <a href="calculator.html" class="header_option">
+                Damage Calculator
+            </a>
+        </div>
+        <div class="header_button_list">
+            <a href="login.html" class="header_button">
+                Log In
+            </a>
+            <a href="signup.html" class="header_button">
+                Sign Up
+            </a>
+        </div>
+    </div>
+    <div class="map_content">
+        <div class="map_content_box" id="pokemonDisplay">
+            <h2>Nothing here</h2>
+            <p>Click on a location to get started!</p>
+        </div>
+        <div class="map_holder">
+            <div class="map_holder_real">
+                <img src="images/image1.jpg" alt="" class="map_image">
+                <div class="marker" id="palletTown" onclick="displayPokemon(palletTown)"></div>
+            </div>
+        </div>
+        <div class="map_instructions">
+            <h2>How to use</h2>
+            A map  representative of the orginal games! <br>
+            To use, click on a location of the map, and it will show: <br>
+            - The wild Pokemons in that area <br>
+            - Their level, type and movepool <br>
+            - (Coming soon) Opt-in option to display their stats
+        </div>
+    </div>
+    </div>
+    <!-- <div class="footer">
+        Copyright by Vu Quoc Hoang | <a href="https://www.facebook.com/notkasumeme/">Facebook</a>
+    </div> -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
