@@ -45,41 +45,27 @@
             
         </div>
     </div>
-    <div class="content">
-        <div class="main_content">
-            <h1>Welcome To Poketools</h1>
-            <p>
-                A website with many tools designated to help you with your Pokemon Red/Blue experience!
-            </p>
+    <div class="manager_content">
+        <button class="add_pokemon" onclick="addPokemon()">+ Add Pokemon</button>
+        <div class="add_pokemon_info" id="add_pokemon_info">
+            Pokemon: <input type="text" list="pokemon" id="pokemon_name">
+            Level: <input type="number" name="" id="pokemon_level">
+            Move 1: <input type="text" list="move" id="pokemon_move_1">
+            Move 2: <input type="text" list="move" id="pokemon_move_2">
+            Move 3: <input type="text" list="move" id="pokemon_move_3">
+            Move 4: <input type="text" list="move" id="pokemon_move_4">
+            <button class="add_pokemon" onclick="actuallyAddPokemon()">Submit</button>
         </div>
-        <div id="content1" class="content_feature animate__animated animate__fadeInLeft" style='display: grid;'>
-            <h1>Interactive Map</h1>
-            <p>
-                A fully interactive map where you can check the wild Pokemons, their level, type and moveset in every single area in the game.
-                <a href="map.html">Try it now</a>
-            </p>
-            <img src="images/image1.jpg" alt="">
+        <div id="pokemon_list">
+            
         </div>
-        <div id="content2" class="content_feature_style_2">
-            <h1>Team Manager</h1>
-            <p>
-                A manager for you to keep track of your caught Pokemons and figure out which is the best team for every situation.
-                <a href="manager.html">Try it now</a>
-            </p>
-            <img src="images/image2.png" alt="">
-        </div>
-        <div id="content3" class="content_feature">
-            <h1>Damage Calculator</h1>
-            <p>
-                A calculator to calculate the damage of scenarios with fully customizable Pokemons and moves you can apply to your game.
-                <a href="calculator.html">Coming soon</a>
-            </p>
-            <img src="images/image3.png" alt="">
-        </div>
+        <datalist id="pokemon">
+                        
+        </datalist>
+        <datalist id="move">
+            
+        </datalist>
     </div>
-    <!-- <div id="timer">
-
-    </div> -->
     <div class="footer">
         Copyright by Vu Quoc Hoang | <a href="https://www.facebook.com/notkasumeme/">Facebook</a>
     </div>

@@ -226,6 +226,33 @@ a {
     font-size: 20px;
 }
 
+.logout {
+    position: relative;
+    display: inline-block;
+}
+
+.logout_button {
+    padding: 8px 10px;
+    border: 1px solid yellow;
+    cursor: pointer;
+}
+
+.logout_button_dropdown {
+    color: black;
+    min-width: 108px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 8px 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.logout:hover .logout_button_dropdown {
+    display: block;
+}
+
 .map_content {
     height: 100%;
     display: grid;
@@ -235,7 +262,7 @@ a {
 }
 
 .map_content_box {
-    padding: 50px;
+    padding: 20px;
     font-size: 20px;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
@@ -255,7 +282,7 @@ a {
     display: inline-block;
     height: 700px;
     width: 700px;
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 .map_image {
@@ -266,8 +293,6 @@ a {
 }
 
 .marker {
-    height: 40px;
-    width: 40px;
     /* background-color: #fa4454; */
     position: absolute;
 }
@@ -277,14 +302,18 @@ a {
     opacity: 0.3;
 }
 
-.pokemonicon {
-    width: 100px;
-    height: 100px;
-}
-
 #palletTown {
     top: 465px;
     left: 138px;
+    height: 40px;
+    width: 40px;
+}
+
+#route1 {
+    top: 389px;
+    left: 138px;
+    height: 80px;
+    width: 39px;
 }
 
 .map_instructions {
@@ -298,8 +327,276 @@ a {
     color: white;
 }
 
+#user_content {
+    background-color: #f7edc5;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#user_content input {
+    min-width: 400px;
+    min-height: 30px;
+    padding: 20px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+#user_content button {
+    min-width: 400px;
+    min-height: 30px;
+    padding: 20px;
+    font-size: 20px;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#human_checker_image, #human_checker_input, #human_checker_confirm {
+    display: none;
+}
+
+#human_checker_image {
+    height: 200px;
+    width: 200px;
+}
+
+/* timer
+
+#timer {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* very complicated css for the pokemon holders idk */
+
 .pokemon_info_holder {
+    position: relative;
+    display: grid;
+    padding: 8px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1.5fr 1.5fr;
+    border: 4px solid beige;
+    border-radius: 20px;
+    background-color: #fa4454;
+    color: black;
+    margin: 4px;
+    max-width: 400px;
+}
+
+.pokemon_info_holder_image {
+    margin: auto;
+    height: 80px;
+    width: 80px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: white;
+    border: 10px solid white;
+    border-radius: 10px;
+}
+
+.pokemon_info_holder_name {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.pokemon_info_holder_name_content {
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 10px;
+    display: flex;
+}
+
+.pokemon_info_holder_info_type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    font-size: 20px;
+}
+
+.pokemon_info_holder_types {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.pokemon_info_holder_type1,
+.pokemon_info_holder_type2 {
+    padding: 4px 8px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+}
+
+.pokemon_info_holder_move {
+    margin: 8px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    background-color: white;
+    border: 3px solid #727254;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.pokemon_info_holder_move_name {
+    padding: 5px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 1;
+}
+
+.pokemon_info_holder_move_type {
+    padding: 5px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+    border-bottom-left-radius: 7px;
+}
+
+.pokemon_info_holder_move_category {
+    padding: 5px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 2;
+    border-bottom-right-radius: 7px;
+}
+
+.Normal {
+    background-color: #adad7f;
+}
+
+.Fighting {
+    background-color: #c63d29;
+}
+
+.Flying {
+    background-color: #ac97f0;
+}
+
+.Poison {
+    background-color: #a647a2;
+}
+
+.Ground {
+    background-color: #e2c66a;
+}
+
+.Rock {
+    background-color: #bda43f;
+}
+
+.Bug {
+    background-color: #afbd23;
+}
+
+.Ghost {
+    background-color: #765ea1;
+}
+
+.Fire {
+    background-color: #f08830;
+}
+
+.Water {
+    background-color: #6d97ed;
+}
+
+.Grass {
+    background-color: #83ce52;
+}
+
+.Electric {
+    background-color: #f6d53b;
+}
+
+.Psychic {
+    background-color: #f7638c;
+}
+
+.Ice {
+    background-color: #9edbd9;
+}
+
+.Dragon {
+    background-color: #7b48f6;
+}
+
+.Physical {
+    background-color: #fc4c02;
+    color: #fde604;
+}
+
+.Special {
+    background-color: #2677e5;
+    color: #dafef9;
+}
+
+.Status {
+    background-color: #a9a977;
+    color: #fdfdfc;
+}
+
+.None {
+    display: none;
+}
+
+.delete_button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: beige;
+    color: black;
+    border: 2px solid black;
+}
+
+.manager_content {
+    background-color: beige;
+    padding: 50px;
+}
+
+.add_pokemon {
+    font-size: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #fa4454;
+    color: white;
+}
+
+.add_pokemon:hover {
+    cursor: pointer;
+    background-color: #cc2424;
+}
+
+.add_pokemon_info {
+    font-size: 24px;
+    display: none;
+}
+
+#pokemon_list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+.manager_content {
+    height: 75vh;
 }
